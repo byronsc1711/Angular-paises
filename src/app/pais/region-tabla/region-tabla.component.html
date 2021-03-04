@@ -1,0 +1,30 @@
+<h1>Bienvenido</h1>
+<table>
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>bandera</th>
+            <th>nombre</th>
+            <th>poblacion</th>
+            <th>capital</th>
+            <th>region</th>
+        </tr>
+
+    </thead>
+    <tbody>
+        <tr *ngFor="let pais of paises let i=index">
+            <td>{{i+1}}</td>
+            <td>
+                <img [src]="pais.flag">
+            </td>
+            <td>{{pais.name}}</td>
+            <td>{{pais.population | number}}</td>
+            <td>{{pais.capital}}</td>
+            <td>{{pais.region}}</td>
+            <td>
+                <a [routerLink]="['/pais', pais.alpha2Code]"></a>
+            </td>
+        </tr>
+
+    </tbody>
+</table>

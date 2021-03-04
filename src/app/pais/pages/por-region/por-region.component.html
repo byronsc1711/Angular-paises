@@ -1,0 +1,16 @@
+<h2>POR REGION</h2>
+<hr>
+<div class="row">
+    <div class="col">
+        <app-region-input (onEnter)="buscar($event)"> </app-region-input>
+
+    </div>
+</div>
+<hr>
+<div *ngIf="hayError" class="alert alert-danger">
+</div>
+<div class="row">
+    <div class="col">
+        <app-region-tabla [paises]="paises"></app-region-tabla>
+    </div>
+</div>

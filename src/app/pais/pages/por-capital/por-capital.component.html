@@ -1,0 +1,16 @@
+<h2>POR CAPITAL</h2>
+<hr>
+<div class="row">
+    <div class="col">
+        <app-capital-input (onEnter)="buscar($event)"> </app-capital-input>
+
+    </div>
+</div>
+<hr>
+<div *ngIf="hayError" class="alert alert-danger">
+</div>
+<div class="row">
+    <div class="col">
+        <app-capital-tabla [paises]="paises"></app-capital-tabla>
+    </div>
+</div>
